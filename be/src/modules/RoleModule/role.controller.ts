@@ -26,7 +26,7 @@ export class RoleController {
     }
 
     @Post()
-    @Authorization('role', actionEnum.CREATE)
+    // @Authorization('role', actionEnum.CREATE)
     async createRole(@Body() body: CreateRoleDto) {
         try {
             const result = await this.roleService.createRole(body)
@@ -41,7 +41,7 @@ export class RoleController {
     }
 
     @Put(':id')
-    @Authorization('role', actionEnum.UPDATE)
+    // @Authorization('role', actionEnum.UPDATE)
     async updateRole(@Body() body: CreateRoleDto, @Param('id') id: number) {
         try {
             const result = await this.roleService.updateRole(id, body)
@@ -56,7 +56,7 @@ export class RoleController {
     }
 
     @Delete(':id')
-    @Authorization('role', actionEnum.DELETE)
+    // @Authorization('role', actionEnum.DELETE)
     async deleteRole(@Param('id') id: number) {
         try {
             await this.roleService.deleteRole(id)

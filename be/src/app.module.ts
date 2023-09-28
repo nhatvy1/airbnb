@@ -10,6 +10,8 @@ import { Role } from './entities/Role';
 import { Permission } from './entities/Permission';
 import { Room } from './entities/Room';
 import { RoomModule } from './modules/RoomModule/room.module';
+import { AuthModule } from './modules/AuthModule/auth.module';
+import { PassportModule } from '@nestjs/passport';
 
 @Module({
     imports: [
@@ -25,10 +27,12 @@ import { RoomModule } from './modules/RoomModule/room.module';
             synchronize: true,
             // logging: true,
         }),
+        AuthModule,
         UserModule,
         RoleModule,
         PermissionModule,
         RoomModule,
+        PassportModule.register({ session: true}),
         JwtModule.register({
             global: true,
             secret: process.env.JWT_AIRBNB,

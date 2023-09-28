@@ -37,6 +37,7 @@ export class UsersController {
         })
     }
 
+
     @Delete(':id')
     @Authorization('user', actionEnum.DELETE)
     async deleteUser(@Body() id: number) {

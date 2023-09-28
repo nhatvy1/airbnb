@@ -30,9 +30,11 @@ export class PermissionService extends BaseService<Permission> {
                 role: { id: role.id },
             })
 
-            if (permission) {
-                return permission
-            } else {
+
+            // if (permission) {
+            //     console.log('Da ton tai')
+            //     return permission
+            // } else {
                 const checkExistPermission =
                     await this.permissionRepository.findOne({
                         where: { action: action, subject: key },
@@ -55,7 +57,7 @@ export class PermissionService extends BaseService<Permission> {
                     await newPermission.save()
                     return newPermission
                 }
-            }
+            // }
         } catch (e) {
             throw e
         }
