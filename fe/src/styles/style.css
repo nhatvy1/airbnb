@@ -1,0 +1,62 @@
+/* scroll bar * /
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: lightgray;
+}
+
+/* swiper-pagination-bullet-active */
+.swiper-pagination-bullet-active {
+    color: white !important;
+}
+
+:root {
+    --swiper-theme-color: white;
+    /*
+    --swiper-preloader-color: var(--swiper-theme-color);
+    --swiper-wrapper-transition-timing-function: initial;
+    */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    color: red !important;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 100;
+    display: none;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    background-color: white;
+    color: red !important;
+    font-size: 15px !important;
+    font-weight: bolder;
+    padding: 0 !important;
+}
+
+.swiperCustom:hover .swiper-button-next {
+    display: flex;
+}
+
+.swiperCustom:hover .swiper-button-prev {
+    display: flex;
+}

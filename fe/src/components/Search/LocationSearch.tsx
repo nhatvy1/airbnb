@@ -30,7 +30,8 @@ const LocationSearch = () => {
                         <Typography
                             sx={{
                                 color: (theme) => theme.palette.tertiary.main,
-                                fontWeight: 'bold'
+                                fontWeight: 'bold',
+                                fontSize: '0.9rem'
                             }}
                         >
                             {choice.text}

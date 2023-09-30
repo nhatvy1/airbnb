@@ -40,6 +40,7 @@ const OptionTab = () => {
                                 key={tab.id}
                                 icon={tab.icon}
                                 label={tab.label}
+                                sx={{ fontSize: '0.7rem', fontWeight: 'bold'}}
                             />
                         )
                     })}
