@@ -1,5 +1,5 @@
 import { BaseEntity, Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
-import { Role } from "./Role";
+import { Role } from "../RoleModule/role.entity";
 
 export enum actionEnum {
     MANAGE = 'manage',

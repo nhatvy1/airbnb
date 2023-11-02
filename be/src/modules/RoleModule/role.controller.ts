@@ -5,7 +5,6 @@ import { CreateRoleDto } from './RoleDto/create.role.dto';
 import { RoleService } from './role.service';
 import { RESPONSE_STATUS, Response } from 'src/utils/response';
 import { Authorization } from 'src/decorators/authorization.decorators';
-import { actionEnum } from 'src/entities/Permission';
 
 @Controller(`${appConfig.BASE_URL}/roles`)
 export class RoleController {

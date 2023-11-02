@@ -3,15 +3,17 @@ import { ConfigModule } from '@nestjs/config'
 import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { UserModule } from './modules/UserModule/user.module'
-import { User } from './entities/User'
+import { User } from './modules/UserModule/user.entity'
 import { RoleModule } from './modules/RoleModule/role.module';
 import { PermissionModule } from './modules/PermissionModule/permission.module';
-import { Role } from './entities/Role';
-import { Permission } from './entities/Permission';
-import { Room } from './entities/Room';
+import { Role } from './modules/RoleModule/role.entity';
+import { Permission } from './modules/PermissionModule/permission.entity';
+import { Room } from './modules/RoomModule/room.entity';
 import { RoomModule } from './modules/RoomModule/room.module';
 import { AuthModule } from './modules/AuthModule/auth.module';
 import { PassportModule } from '@nestjs/passport';
+import { RoomType } from './modules/RoomTypeModule/room.type.entity';
+import { RoomTypeModule } from './modules/RoomTypeModule/room.type.module';
 
 @Module({
     imports: [
@@ -23,7 +25,7 @@ import { PassportModule } from '@nestjs/passport';
             username: process.env.POSTGRES_USER,
             password: process.env.POSTGRES_PASSWORD,
             database: process.env.POSTGRES_DATABASE,
-            entities: [User, Role, Permission, Room],
+            entities: [User, Role, Permission, Room, RoomType],
             synchronize: true,
             // logging: true,
         }),
@@ -32,6 +34,7 @@ import { PassportModule } from '@nestjs/passport';
         RoleModule,
         PermissionModule,
         RoomModule,
+        RoomTypeModule,
         PassportModule.register({ session: true}),
         JwtModule.register({
             global: true,

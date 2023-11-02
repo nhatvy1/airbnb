@@ -1,4 +1,4 @@
-import { Permission } from "src/entities/Permission"
+import { Permission } from "src/modules/PermissionModule/permission.entity"
 
 export const mapPermission = (permissions: Permission[]) => {
     const groupBySubject = permissions.reduce((group, permission) => {

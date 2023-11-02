@@ -6,7 +6,7 @@ import {
     ForbiddenException,
 } from '@nestjs/common'
 import { Reflector } from '@nestjs/core'
-import { Permission, actionEnum } from 'src/entities/Permission'
+import { Permission, actionEnum } from 'src/modules/PermissionModule/permission.entity'
 
 
 @Injectable()

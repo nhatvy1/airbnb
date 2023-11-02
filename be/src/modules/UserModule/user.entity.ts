@@ -8,7 +8,7 @@ import {
     ManyToOne,
     JoinColumn
 } from 'typeorm'
-import { Role } from './Role'
+import { Role } from '../RoleModule/role.entity'
 
 export enum Status {
     ACTIVE = 1,

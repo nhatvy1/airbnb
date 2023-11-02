@@ -5,7 +5,6 @@ import {
     Inject,
     forwardRef,
 } from '@nestjs/common'
-import { User } from 'src/entities/User'
 import { BaseService } from '../BaseModule/BaseModule'
 import { Repository } from 'typeorm'
 import { JwtService } from '@nestjs/jwt'
@@ -17,6 +16,7 @@ import { RoleService } from '../RoleModule/role.service'
 import { PermissionService } from '../PermissionModule/permission.service'
 import { role } from 'src/constant/role'
 import { mapPermission } from 'src/utils/permission'
+import { User } from './user.entity'
 
 @Injectable()
 export class UserService extends BaseService<User> {

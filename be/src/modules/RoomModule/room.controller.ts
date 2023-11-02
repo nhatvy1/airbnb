@@ -18,7 +18,6 @@ export class RoomController {
 
     @Post()
     async createRoom(@Body() data: RoomDto) {
-        console.log('Check body: ', data)
         const result = await this.roomService.createRoom(data)
         return Response({
             message: 'Create room success',

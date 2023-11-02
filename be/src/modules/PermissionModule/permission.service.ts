@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common'
-import { Permission, actionEnum } from 'src/entities/Permission'
 import { BaseService } from '../BaseModule/BaseModule'
 import { InjectRepository } from '@nestjs/typeorm'
 import { Repository } from 'typeorm'
-import { Role } from 'src/entities/Role'
+import { Permission, actionEnum } from './permission.entity'
+import { Role } from '../RoleModule/role.entity'
 
 @Injectable()
 export class PermissionService extends BaseService<Permission> {

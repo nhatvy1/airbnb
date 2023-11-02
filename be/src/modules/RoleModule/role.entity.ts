@@ -8,7 +8,7 @@ import {
     ManyToMany,
     JoinTable,
 } from 'typeorm'
-import { Permission } from './Permission'
+import { Permission } from '../PermissionModule/permission.entity'
 
 @Entity()
 export class Role extends BaseEntity {
