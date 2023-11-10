@@ -1,5 +1,5 @@
-export const role = {
-    ADMIN: 'ADMIN',
-    STAFF: 'STAFF',
-    USER: 'USER'
+export const ROLE = {
+	ADMIN: 'ADMIN',
+	STAFF: 'STAFF',
+	USER: 'USER',
 }

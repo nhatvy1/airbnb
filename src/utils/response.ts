@@ -1,20 +1,22 @@
+import { Role } from 'src/modules/RoleModule/role.entity'
+
 export enum RESPONSE_STATUS {
-    SUCCESS = 1,
-    FAILED = 0,
+	SUCCESS = 1,
+	FAILED = 0,
 }
 
 export const Response = <T>({
-    statusCode,
-    message,
-    result,
+	statusCode,
+	message,
+	result,
 }: {
-    statusCode: RESPONSE_STATUS
-    message?: string
-    result?: T
+	statusCode: RESPONSE_STATUS
+	message?: string
+	result?: T
 }) => {
-    return {
-        status: statusCode,
-        message,
-        result: result || {},
-    }
+	return {
+		status: statusCode,
+		message,
+		result: result || {},
+	}
 }
