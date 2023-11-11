@@ -15,6 +15,7 @@ import { PassportModule } from '@nestjs/passport'
 import { RoomType } from './modules/RoomTypeModule/room.type.entity'
 import { RoomTypeModule } from './modules/RoomTypeModule/room.type.module'
 import typeormConfig from './config/typeorm.config'
+import { DemoModule } from './modules/DemoModule/demo.module'
 
 @Module({
 	imports: [
@@ -26,6 +27,7 @@ import typeormConfig from './config/typeorm.config'
 		PermissionModule,
 		RoomModule,
 		RoomTypeModule,
+		DemoModule,
 		PassportModule.register({ session: true }),
 		JwtModule.register({
 			global: true,
